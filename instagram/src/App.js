@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import InstaFeed from './components/InstaFeed/InstaFeed';
 import dummyData from './dummyData';
 import './App.css';
 
@@ -18,6 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
+        <InstaFeed />
         <PostContainer />
       </div>
     );
