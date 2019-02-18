@@ -5,7 +5,13 @@ import "./PostContainer.css";
 const PostContainer = () => {
     return (
         <div className="post-container">
-            <h2>Post Container, Bro!</h2>
+            <div className="post-header">
+                <img className="post-user-avatar" src="#" alt="User's avatar" />
+                <h2 className="post-user-name">Instagram Username</h2>
+            </div>
+            <div className="post-image-container">
+                <img className="post-image" src="#" alt=""/>
+            </div>
             <CommentSection />
         </div>
     );
