@@ -1,10 +1,11 @@
 import React from 'react';
+import PostContainer from '../PostContainer/PostContainer';
 import './InstaFeed.css';
 
 const InstaFeed = () => {
     return (
         <div className="insta-feed">
-            <h2>Insta Feed!</h2>
+            <PostContainer />
         </div>
     );
 };
