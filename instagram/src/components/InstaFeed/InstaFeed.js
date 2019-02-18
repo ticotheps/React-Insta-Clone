@@ -2,10 +2,12 @@ import React from 'react';
 import PostContainer from '../PostContainer/PostContainer';
 import './InstaFeed.css';
 
-const InstaFeed = () => {
+const InstaFeed = (props) => {
     return (
         <div className="insta-feed">
-            <PostContainer />
+            {props.dummyData.map(postContainer => (
+                <PostContainer key={postContainer.timestamp} postContainer={postContainer} />
+            ))}
         </div>
     );
 };
