@@ -13,7 +13,7 @@ const InstaFeed = (props) => {
                         <CommentSection />
                     </div>
                 ))}
-            </div>
+            </div> 
         </div>
     );
 };

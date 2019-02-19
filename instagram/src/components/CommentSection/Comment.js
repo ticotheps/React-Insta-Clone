@@ -4,7 +4,7 @@ import "./Comment.css";
 const Comment = () => {
     return (
         <div className="comment">
-            <h4>Hi. I'm a comment.</h4>
+            <p>Hi. I'm a comment.</p>
         </div>
     );
 };
