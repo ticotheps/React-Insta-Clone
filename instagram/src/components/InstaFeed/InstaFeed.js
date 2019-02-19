@@ -1,6 +1,5 @@
 import React from 'react';
 import PostContainer from '../PostContainer/PostContainer';
-import PropTypes from 'prop-types';
 import './InstaFeed.css';
 
 const InstaFeed = (props) => {
@@ -17,7 +16,5 @@ const InstaFeed = (props) => {
     );
 };
 
-PostContainer.propTypes = {
-}
 
 export default InstaFeed;
