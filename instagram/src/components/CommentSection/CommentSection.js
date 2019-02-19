@@ -16,7 +16,9 @@ const CommentSection = (props) => {
                 </div>
             </div>
             <div className="comment-section-feed">
-                <Comment comment={props.commentSection} />
+                {props.commentSection.comments.map(comment => (
+                    <Comment comment={comment} />
+                ))}
             </div>
             <CommentInput />
         </div>
