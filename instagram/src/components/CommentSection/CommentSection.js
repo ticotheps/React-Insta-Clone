@@ -16,7 +16,7 @@ const CommentSection = (props) => {
                 </div>
             </div>
             <div className="comment-section-feed">
-                <Comment />
+                <Comment comment={props.commentSection} />
             </div>
             <CommentInput />
         </div>
