@@ -12,9 +12,9 @@ const SearchBar = () => {
                 <input className="search-bar-user-input" type="text" placeholder="Search"/>
             </div>
             <div className="search-bar-container-right">
-                <a href="#"><i className="far fa-compass"></i></a>
-                <a href="#"><i className="far fa-heart"></i></a>
-                <a href="#"><i className="far fa-user"></i></a>
+                <a href="https://instagram.com"><i className="far fa-compass"></i></a>
+                <a href="https://instagram.com"><i className="far fa-heart"></i></a>
+                <a href="https://instagram.com"><i className="far fa-user"></i></a>
             </div>
         </div>
     );
