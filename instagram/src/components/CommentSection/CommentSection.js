@@ -12,7 +12,7 @@ const CommentSection = (props) => {
                     <a href="https://instagram.com"><i className="far fa-comment"></i></a>
                 </div>
                 <div className="comment-section-likes">
-                    <p className="likes-display">373 likes</p>
+                    <p className="likes-display">{props.commentSection.likes} likes</p>
                 </div>
             </div>
             <div className="comment-section-feed">
