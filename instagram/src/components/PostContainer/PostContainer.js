@@ -1,5 +1,4 @@
 import React from 'react';
-import CommentSection from "../CommentSection/CommentSection";
 import "./PostContainer.css";
 
 const PostContainer = (props) => {
@@ -12,7 +11,6 @@ const PostContainer = (props) => {
             <div className="post-image-container">
                 <img className="post-image" src={props.postContainer.imageUrl} alt=""/>
             </div>
-            <CommentSection />
         </div>
     );
 };
