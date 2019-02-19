@@ -18,7 +18,7 @@
 
 .comment-section-likes {
     justify-content: flex-start;
-    padding-left: 20px;
+    padding-left: 15px;
 }
 
 .likes-display {
@@ -43,7 +43,7 @@
 }
 
 .comment-input {
-    width: 97%;
+    width: 95%;
     height: 40px;
     padding-left: 10px;
     border: 1px solid lightgray;
@@ -55,7 +55,7 @@
 .comment-container {
     display: flex;
     justify-content: flex-start;
-    padding: 5px 10px;
+    padding: 5px 15px;
     width: 100%;
 }
 
