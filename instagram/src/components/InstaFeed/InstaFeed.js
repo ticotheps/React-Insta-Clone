@@ -7,10 +7,10 @@ const InstaFeed = (props) => {
     return (
         <div className="insta-feed">
             <div>
-                {props.dummyData.map(postContainer => (
+                {props.posts.map(postContainer => (
                     <div className="post-card">
                         <PostContainer key={postContainer.timestamp} postContainer={postContainer} />
-                        <CommentSection />
+                        <CommentSection dummyData={props.posts} />
                     </div>
                 ))}
             </div> 
