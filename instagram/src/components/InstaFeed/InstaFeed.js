@@ -1,6 +1,5 @@
 import React from 'react';
 import PostContainer from '../PostContainer/PostContainer';
-import CommentSection from '../CommentSection/CommentSection';
 import './InstaFeed.css';
 
 const InstaFeed = (props) => {
@@ -10,7 +9,6 @@ const InstaFeed = (props) => {
                 {props.posts.map(postContainer => (
                     <div className="post-card">
                         <PostContainer key={postContainer.timestamp} postContainer={postContainer} />
-                        <CommentSection dummyData={props.posts} />
                     </div>
                 ))}
             </div> 
