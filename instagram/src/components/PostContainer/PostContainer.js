@@ -12,7 +12,7 @@ const PostContainer = (props) => {
             <div className="post-image-container">
                 <img className="post-image" src={props.postContainer.imageUrl} alt=""/>
             </div>
-            <CommentSection />
+            <CommentSection commentSection={props.commentSection} />
         </div>
     );
 };
