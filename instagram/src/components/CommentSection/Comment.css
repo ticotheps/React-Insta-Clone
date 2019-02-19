@@ -7,37 +7,54 @@
     width: 100%;
 }
 
-.comment-section-icons {
+.comment-section-icons, .comment-section-likes {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    height: 30px;
+    height: 40px;
     width: 15%;
 }
 
-.fa-heart, .fa-comment {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
-
 .comment-section-likes {
-    border: 2px solid blue;
+    justify-content: flex-start;
+    padding-left: 20px;
 }
 
 .likes-display {
     color: black;
+    font-weight: bolder;
 }
 
-.comment-input-container{
+.fa-icon-comment-section {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    margin: 0 15px;
+}
 
+
+.comment-input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border: 1px solid red;
 }
 
 .comment-input {
+    width: 98%;
+    height: 40px;
     padding-left: 10px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    font-size: 18px;
+
 }
 
 .comment {
+    margin-top: 40px;
     background-color: aqua;
+
 }
