@@ -25,8 +25,8 @@ class App extends Component {
   }
 }
 
-InstaFeed.propTypes = {
-  posts: PropTypes.arrayOf(
+App.propTypes = {
+  dummyData: PropTypes.arrayOf(
       PropTypes.shape({
           username: PropTypes.string.isRequired,
           thumnailUrl: PropTypes.string,
