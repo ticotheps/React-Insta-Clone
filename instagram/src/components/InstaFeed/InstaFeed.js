@@ -17,21 +17,7 @@ const InstaFeed = (props) => {
     );
 };
 
-InstaFeed.propTypes = {
-    posts: PropTypes.arrayOf(
-        PropTypes.shape({
-            username: PropTypes.string.isRequired,
-            thumnailUrl: PropTypes.string,
-            likes: PropTypes.number,
-            timestamp: PropTypes.string,
-            comments: PropTypes.arrayOf(
-                PropTypes.shape({
-                    username: PropTypes.string.isRequired,
-                    text: PropTypes.string
-                })
-            )
-        })
-    )
+PostContainer.propTypes = {
 }
 
 export default InstaFeed;
