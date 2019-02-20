@@ -27,8 +27,8 @@ class CommentSection extends React.Component {
                     </div>
                 </div>
                 <div className="comment-section-feed">
-                    {this.state.commentSection.comments.map(comment => (
-                        <Comment key={this.state.thumbnailUrl} comment={comment} />
+                    {this.state.commentSection.comments.map((comment, index) => (
+                        <Comment key={index} comment={comment} />
                     ))}
                 </div>
                 <CommentInput />
@@ -38,8 +38,7 @@ class CommentSection extends React.Component {
 }
 
 CommentSection.propTypes = {
-    commentSection: PropTypes.arrayOf(
-        PropTypes.shape({
+    commentSection: PropTypes.shape({
             thumnailUrl: PropTypes.string,
             likes: PropTypes.number,
             comments: PropTypes.arrayOf(
@@ -48,8 +47,7 @@ CommentSection.propTypes = {
                     text: PropTypes.string
                 })
             )
-        })
-    ),
+    }),
     comments: PropTypes.arrayOf(
         PropTypes.shape({
             thumbnailUrl: PropTypes.string
