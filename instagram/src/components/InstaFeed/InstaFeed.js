@@ -39,7 +39,10 @@ InstaFeed.propTypes = {
                 })
             )
         })
-    )
+    ),
+    postContainer: PropTypes.shape({
+        timestamp: PropTypes.number
+    })
   }
 
 export default InstaFeed;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Comment from "./Comment";
 import CommentInput from "./CommentInput";
+import PropTypes from 'prop-types';
 import "./Comment.css";
 
 
@@ -33,6 +34,26 @@ class CommentSection extends React.Component {
             </div>
         );
     }
+}
+
+CommentSection.propTypes = {
+    commentSection: PropTypes.arrayOf(
+        PropTypes.shape({
+            thumnailUrl: PropTypes.string,
+            likes: PropTypes.number,
+            comments: PropTypes.arrayOf(
+                PropTypes.shape({
+                    username: PropTypes.string,
+                    text: PropTypes.string
+                })
+            )
+        })
+    ),
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({
+            thumbnailUrl: PropTypes.string
+        })
+    )
 }
 
 export default CommentSection;
