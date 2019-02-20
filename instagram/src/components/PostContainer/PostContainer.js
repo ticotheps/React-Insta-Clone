@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import PropTypes from 'prop-types';
 import "./PostContainer.css";
 
 class PostContainer extends React.Component {
@@ -24,5 +25,12 @@ class PostContainer extends React.Component {
         );
     }
 }
+
+PostContainer.propTypes = {
+    postContainer: PropTypes.object,
+    thumbnailUrl: PropTypes.string,
+    username: PropTypes.string,
+    imageUrl: PropTypes.string
+};
 
 export default PostContainer;

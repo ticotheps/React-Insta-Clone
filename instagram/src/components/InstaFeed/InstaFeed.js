@@ -26,6 +26,7 @@ class InstaFeed extends React.Component {
 }
 
 InstaFeed.propTypes = {
+    postContainer: PropTypes.object,
     posts: PropTypes.arrayOf(
         PropTypes.shape({
             username: PropTypes.string.isRequired,
@@ -39,10 +40,7 @@ InstaFeed.propTypes = {
                 })
             )
         })
-    ),
-    postContainer: PropTypes.shape({
-        timestamp: PropTypes.number
-    })
-  }
+    )
+}
 
 export default InstaFeed;
