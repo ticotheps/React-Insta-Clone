@@ -8,11 +8,17 @@ import './App.css';
 
 class App extends Component {
   constructor() {
+    console.log("constructor is running");
     super();
     this.state = {
       posts: dummyData
     };
   }
+
+  componentDidMount() {
+    console.log("CDM is running!");
+  }
+
   render() {
     return (
       <div className="App">
