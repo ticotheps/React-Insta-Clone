@@ -14,6 +14,7 @@ class CommentSection extends React.Component {
     }
 
     render() {
+        console.log(this.state.commentSection);
         return (
             <div className="comment-section">
                 <div className="comment-section-interaction">
