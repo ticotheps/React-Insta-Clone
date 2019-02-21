@@ -8,7 +8,6 @@ import './App.css';
 
 class App extends Component {
   constructor() {
-    console.log("constructor is running");
     super();
     this.state = {
       posts: []
@@ -16,19 +15,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log("CDM is running!");
 
     this.setState({ 
       posts: dummyData
     });
-
-    console.log(dummyData);
-    console.log(this.state.posts);
   }
 
   render() {
-    console.log("render fires");
-    console.log(this.state.posts);
     return (
       <div className="App">
         <SearchBar />

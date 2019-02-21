@@ -9,12 +9,19 @@ class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            commentSection: props.commentSection
+            commentSection: props.commentSection,
+            inputText: ""
         };
     }
 
+    // addNewComment = (e, index) => {
+    //     e.preventDefault();
+    //     const newComment = {
+        
+    //     }
+    // }
+
     render() {
-        console.log(this.state.commentSection);
         return (
             <div className="comment-section">
                 <div className="comment-section-interaction">
@@ -31,7 +38,9 @@ class CommentSection extends React.Component {
                         <Comment key={index} comment={comment} />
                     ))}
                 </div>
-                <CommentInput />
+                <form onSubmit={this.handleChanges}>
+                    <CommentInput type="text" value={this.state.inputText} />
+                </form>
             </div>
         );
     }
