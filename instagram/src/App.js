@@ -11,20 +11,20 @@ class App extends Component {
     console.log("constructor is running");
     super();
     this.state = {
-      posts: dummyData
+      posts: []
     };
   }
 
-  // componentDidMount() {
-  //   console.log("CDM is running!");
+  componentDidMount() {
+    console.log("CDM is running!");
 
-  //   this.setState({ 
-  //     posts: dummyData
-  //   });
+    this.setState({ 
+      posts: dummyData
+    });
 
-  //   console.log(dummyData);
-  //   console.log(this.state.posts);
-  // }
+    console.log(dummyData);
+    console.log(this.state.posts);
+  }
 
   render() {
     console.log("render fires");
