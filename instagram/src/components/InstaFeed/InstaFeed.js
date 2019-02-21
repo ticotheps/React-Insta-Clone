@@ -8,9 +8,9 @@ const InstaFeed = props => {
     return (
         <div className="insta-feed">
             <div>
-                {props.posts.map((postContainer, index) => (
+                {props.posts.map((post, index) => (
                     <div className="post-card" key={index}>
-                        <PostContainer key={postContainer.timestamp} postContainer={postContainer} />
+                        <PostContainer key={post.timestamp} postContainer={post} />
                     </div>
                 ))}
             </div> 

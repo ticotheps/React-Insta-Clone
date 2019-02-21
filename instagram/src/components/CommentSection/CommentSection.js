@@ -9,19 +9,18 @@ class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            commentSection: props.commentSection,
+            postObject: props.postObject,
             inputText: ""
         };
     }
 
-    // addNewComment = (e, index) => {
-    //     e.preventDefault();
-    //     const newComment = {
-        
-    //     }
-    // }
+    handleChanges = e => {
+        this.setState({ inputText: e.target.value });
+        console.log(this.state.inputText);
+    };
 
     render() {
+        console.log(this.state.postObject);
         return (
             <div className="comment-section">
                 <div className="comment-section-interaction">
@@ -30,16 +29,20 @@ class CommentSection extends React.Component {
                         <a href="https://instagram.com"><i className="fa-icon-comment-section far fa-comment"></i></a>
                     </div>
                     <div className="comment-section-likes">
-                        <p className="likes-display">{this.state.commentSection.likes} likes</p>
+                        <p className="likes-display">{this.state.postObject.likes} likes</p>
                     </div>
                 </div>
                 <div className="comment-section-feed">
-                    {this.state.commentSection.comments.map((comment, index) => (
+                    {this.state.postObject.comments.map((comment, index) => (
                         <Comment key={index} comment={comment} />
                     ))}
                 </div>
-                <form onSubmit={this.handleChanges}>
-                    <CommentInput type="text" value={this.state.inputText} />
+                <form onSubmit={this.submitComment}>
+                    <CommentInput 
+                        type="text" 
+                        value={this.state.inputText} 
+                        onChange={this.handleChanges}
+                    />
                 </form>
             </div>
         );

@@ -7,20 +7,20 @@ class PostContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            postContainer: props.postContainer
+            post: props.postContainer
         };
     }
     render() {
         return (
             <div className="post-container">
                 <div className="post-header">
-                    <img className="post-user-avatar" src={this.state.postContainer.thumbnailUrl} alt="User's avatar" />
-                    <h2 className="post-user-name">{this.state.postContainer.username}</h2>
+                    <img className="post-user-avatar" src={this.state.post.thumbnailUrl} alt="User's avatar" />
+                    <h2 className="post-user-name">{this.state.post.username}</h2>
                 </div>
                 <div className="post-image-container">
-                    <img className="post-image" src={this.state.postContainer.imageUrl} alt=""/>
+                    <img className="post-image" src={this.state.post.imageUrl} alt=""/>
                 </div>
-                <CommentSection commentSection={this.state.postContainer} />
+                <CommentSection postObject={this.state.post} />
             </div>
         );
     }
