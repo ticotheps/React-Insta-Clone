@@ -18,30 +18,6 @@ const InstaFeed = props => {
     )
 };
 
-// class InstaFeed extends React.Component {
-//     constructor(props) {
-//         console.log("instafeed constructor", props.posts);
-//         super(props);
-//         this.state = {
-//             posts: props.posts
-//         };
-//     }
-
-//     render() {
-//         return (
-//             <div className="insta-feed">
-//                 <div>
-//                     {this.state.posts.map((postContainer, index) => (
-//                         <div className="post-card" key={index}>
-//                             <PostContainer key={postContainer.timestamp} postContainer={postContainer} />
-//                         </div>
-//                     ))}
-//                 </div> 
-//             </div>
-//         );
-//     }
-// }
-
 InstaFeed.propTypes = {
     postContainer: PropTypes.object,
     posts: PropTypes.arrayOf(
