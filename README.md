@@ -1,6 +1,6 @@
 # React-Insta-Clone
 
-URL for live site via GitHub Pages: https://ticotheps.github.io/React-Insta-Clone/
+URL for live website via GitHub Pages: https://ticotheps.github.io/React-Insta-Clone/
 
 ## Introduction
 

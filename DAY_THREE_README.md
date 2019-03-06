@@ -27,16 +27,18 @@
 - Building the High Order Component
 
   - Create a directory called `authentication`
-  - Inside that directory create a HOC called `authenticate`. This is where all of the magic sis going to happen.
+  - Inside that directory create a HOC called `withAuthenticate`. This is where all of the magic is going to happen.
   - This component should be able to take in a component as an argument, and it will return a `class` component.
-  - Inside of `authenticate's` render method, you'll want to return the Component that gets passed into it.
-  - Be sure to export out this component.
-  - Head over to App.js and `import` in our new `authenticate` Higher Order Component and pass in `App`.
-  - If this worked right then everything should render as it used to.
-  - Authenticate will look a lot like this when you're done setting it up.
+  - Inside of `withAuthenticate's` render method, you'll want to return the Component that gets passed into it.
+  - Be sure to export.
+  - Head over to App.js and `import` in our new `withAuthenticate` Higher Order Component.
+  - Set a new const called `ComponentFromWithAuthenticate`, and set it's value to the HOC invoked, with `PostsPage` passed in.
+  - Inside `App`, you should now render `ComponentFromWithAuthenticate` in place of `PostsPage`.
+  - If this worked correctly, then everything should render as it used to.
+  - `withAuthenticate` will look a lot like this when you're done setting it up.
 
 ```js
-const authenticate = App =>
+const withAuthenticate = App =>
   class extends React.Component {
     render() {
       return <App />;
@@ -54,13 +56,13 @@ const authenticate = App =>
 
 - Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
 
-  - First, we need to change our `authenticate` HOC to return a second function that will take in a second component (which will be the `LoginPage`). This will look like a "double arrow" function - `const authenticate = App => LoginPage => {}`.
-  - In `App.js`, the component that is exported is the class component that our HOC returns. So invoke the HOC function twice (which is called currying) on the export line. The first time it's invoked, pass in `App`. The second time, pass in `LoginPage` (which you'll need to import here). ie - `export default higherOrderComp(FirstComponent)(SecondComponent)`
-  - Inside of the class component that the inner function in `authenticate` returns, we need to add a constructor to hold our state data.
-  - On state we need a user `loggedIn` boolean flag.
-  - On `componentDidMount` we need to check `localStorage` to see if a user is logged in.
-  - Inside of the render function we will check `if a user is logged in`
-  - If a user is logged in we will return the `<App />`, else we will return the `<LoginPage>`
+  - First, we need to change our `withAuthenticate` HOC to return a second function that will take in a second component (which will be the `LoginPage`). This will look like a "double arrow" function - `const withAuthenticate = PostsPage => LoginPage => {}`.
+  - In `App.js`, we can now invoke the HOC function twice (which is called currying). The first time it's invoked, pass in `PostsPage`. The second time, pass in `LoginPage` (which you'll need to import here). ie - `export default higherOrderComp(FirstComponent)(SecondComponent)`
+  - Inside of the class component that the inner function in `withAuthenticate` returns, we need to add a constructor to hold our state data.
+  - On state we need a `loggedIn` boolean flag.
+  - In `componentDidMount` we need to check `localStorage` to see if a user is logged in, and setState accordingly.
+  - Inside of the render function we will check `if a user is logged in` from the state boolean flag
+  - If a user is logged in we will return the `<PostsPage />`, else we will return the `<LoginPage>`
 
 #### Stretch Problems (Day III)
 
